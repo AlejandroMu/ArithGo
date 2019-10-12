@@ -61,6 +61,7 @@ public class Challenge extends AppCompatActivity {
                 EstudentRepository.updatePoint(es);
                 Intent i=new Intent(Challenge.this,MapsActivity.class);
                 startActivity(i);
+                finish();
             }
         });
     }

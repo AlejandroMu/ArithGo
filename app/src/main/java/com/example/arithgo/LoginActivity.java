@@ -12,6 +12,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.arithgo.app.ArithApp;
+import com.example.arithgo.model.entity.Student;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -30,7 +31,6 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         hard=findViewById(R.id.hard_radio);
         medium=findViewById(R.id.medium_radio);
         easy=findViewById(R.id.easy_radio);
@@ -47,6 +47,7 @@ public class LoginActivity extends AppCompatActivity {
                     ArithApp.setStudent(nam);
                     ArithApp.MODE=level;
                     startActivity(new Intent(LoginActivity.this,MapsActivity.class));
+                    finish();
                 }else {
                     Toast.makeText(LoginActivity.this, "Campos incompletos", Toast.LENGTH_LONG).show();
                 }
