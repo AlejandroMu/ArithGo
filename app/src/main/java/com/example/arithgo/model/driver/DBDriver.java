@@ -12,7 +12,7 @@ public class DBDriver extends SQLiteOpenHelper {
         return instance=instance==null?new DBDriver(con):instance;
     }
     public static final String DB_NAME = "ArithGo";
-    public static final int DB_VERSION = 1;
+    public static final int DB_VERSION = 2;
 
     //ESTUDENT TABLE
     public static final String ESTUDENT_TABLE="ESTUDENT";

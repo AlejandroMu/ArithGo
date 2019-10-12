@@ -144,9 +144,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
          boolean isBibliotecaT= PolyUtil.containsLocation(pos,biblioteca.getPoints(),true);
          boolean isCT= PolyUtil.containsLocation(pos,bloqueC.getPoints(),true);
          boolean isLT= PolyUtil.containsLocation(pos,bloqueL.getPoints(),true);
-         boolean vibrar=(!isBiblioteca&&isBibliotecaT);
-         vibrar|=!isC&&isCT;
-         vibrar|=!isL&&isLT;
+         boolean vibrar=isBiblioteca^isBibliotecaT;
+         vibrar^=isC&&isCT;
+         vibrar^=!isL&&isLT;
 
          isBiblioteca=isBibliotecaT;
          isC=isCT;

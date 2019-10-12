@@ -24,6 +24,7 @@
         android:textSize="5mm"
         android:background="@drawable/logout"
         android:id="@+id/logout_button"
+        android:backgroundTint="#FF0000"
 
         />
 
@@ -35,6 +36,7 @@
         android:textSize="5mm"
         android:background="@drawable/tienda"
         android:id="@+id/store_button"
+        android:visibility="invisible"
         />
 
     <Button
@@ -46,5 +48,6 @@
         android:textSize="5mm"
         android:background="@drawable/challenge"
         android:id="@+id/challenge_button"
+        android:visibility="invisible"
         />
 </RelativeLayout>
